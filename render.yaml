@@ -1,27 +1,27 @@
 services:
-- type: web
-name: airbyte-webapp
-env: docker
-dockerfilePath: airbyte-webapp/Dockerfile
-plan: free
-envVars:
-- key: AIRBYTE_ROLE
-value: webapp
+  - type: web
+    name: airbyte-webapp
+    env: docker
+    dockerfilePath: airbyte-webapp/Dockerfile
+    plan: free
+    envVars:
+      - key: AIRBYTE_ROLE
+        value: webapp
 
-- type: web
-name: airbyte-server
-env: docker
-dockerfilePath: airbyte-server/Dockerfile
-plan: free
-envVars:
-- key: AIRBYTE_ROLE
-value: server
+  - type: web
+    name: airbyte-server
+    env: docker
+    dockerfilePath: airbyte-server/Dockerfile
+    plan: free
+    envVars:
+      - key: AIRBYTE_ROLE
+        value: server
 
-- type: background
-name: airbyte-worker
-env: docker
-dockerfilePath: airbyte-workers/Dockerfile
-plan: free
-envVars:
-- key: AIRBYTE_ROLE
-value: worker
+  - type: background
+    name: airbyte-worker
+    env: docker
+    dockerfilePath: airbyte-workers/Dockerfile
+    plan: free
+    envVars:
+      - key: AIRBYTE_ROLE
+        value: worker
