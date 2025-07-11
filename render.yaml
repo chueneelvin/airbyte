@@ -17,7 +17,7 @@ services:
       - key: AIRBYTE_ROLE
         value: server
 
-  - type: background
+  - type: worker
     name: airbyte-worker
     env: docker
     dockerfilePath: airbyte-workers/Dockerfile
